@@ -1,0 +1,300 @@
+/* Importando fonte do Google */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #ffffff; /* Fundo geral mais suave */
+}
+
+header {
+    background-color: #ffffff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #00b300;
+}
+
+header img {
+    height: 40px; /* Aumenta o tamanho da logo */
+}
+
+header .search-bar {
+    flex-grow: 0; /* Remove o comportamento de crescer automaticamente */
+    width: 40%; /* Define um tamanho menor */
+    margin: 0 10px;
+}
+
+header input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 40px; /* Torna a barra de pesquisa mais arredondada */
+    font-size: 14px; /* Ajusta o tamanho da fonte */
+}
+
+
+header .user {
+    font-size: 14px;
+    color: #333;
+}
+
+.banner {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: left; /* Alinha o texto à esquerda */
+    background-image: url('../img/intelisa.png'); /* Adicione a imagem do banner aqui */
+    background-size: cover;
+    background-position: center;
+    height: 300px; /* Ajuste conforme necessário */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Alinha os itens à esquerda */
+}
+
+.banner h1 {
+    font-size: 36px;
+    margin:  20px;
+}
+
+.banner p {
+    font-size: 18px;
+    margin: 10px 0 0;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    background-color: #00b300;
+    padding: 10px 0;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    transition: background-color 0.3s, border 0.3s;
+}
+
+.menu a.active, .menu a:hover {
+    background-color: #007a00;
+    border: 2px solid white;
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+}
+
+.product {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.product p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Estilizando para telas menores */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .banner {
+        height: 200px;
+        padding: 20px;
+    }
+
+    .products {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .product {
+        width: 100%;
+    }
+}
+
+/* Botão Ver Mais */
+.ver-mais {
+    background-color: #00b300;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.ver-mais:hover {
+    background-color: #007a00;
+}
+
+/* Modal */
+.modal {
+    display: none; /* Oculta o modal por padrão */
+    position: fixed; /* Fixa o modal na tela */
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta o modal para o centro */
+    z-index: 1000; /* Garante que o modal fique na frente */
+    width: 100%;
+    max-width: 400px; /* Define a largura máxima do modal */
+   
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    max-width: 100%; /* Evita que o conteúdo ultrapasse o modal */
+}
+
+.modal-content img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    margin: 10px auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.modal-content h2 {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+
+.modal-content p {
+    margin-top: 10px;
+    font-size: 16px;
+    
+    text-align: left;
+}
+
+.modal-content .close {
+    position: absolute;
+    top: 10px;
+    left: 18px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #000;
+}
+
+
+/* Alinha os produtos */
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espaçamento entre os produtos */
+    justify-content: center; /* Centraliza os produtos */
+}
+
+/* Cada produto */
+.product {
+    display: flex;
+    flex-direction: column; /* Organiza o conteúdo de cima para baixo */
+    align-items: center; /* Alinha o conteúdo ao centro */
+    justify-content: space-between; /* Espaço uniforme entre o conteúdo */
+    width: 225px; /* Define a largura fixa dos produtos */
+    height: 300px; /* Ajusta a altura para ficar mais compacta */
+    text-align: center; /* Centraliza o conteúdo */
+    padding: 10px; /* Adiciona padding para o conteúdo */
+    box-sizing: border-box; /* Garante que o padding não altere a largura/altura */
+    border: 1px solid #ddd; /* Opcional: adiciona uma borda ao redor do produto */
+    border-radius: 5px; /* Opcional: bordas arredondadas */
+}
+
+/* Botões "Ver Mais" */
+.ver-mais {
+    
+    color: white; /* Cor do texto */
+    border: none; /* Remove bordas */
+    padding: 8px 16px; /* Diminui o tamanho do padding do botão */
+    font-size: 14px; /* Ajusta o tamanho da fonte */
+    cursor: pointer; /* Cursor de clique */
+    margin-top: 10px; /* Ajusta a distância do texto até o botão */
+    width: 100%; /* Faz o botão ter a largura total do produto */
+    box-sizing: border-box; /* Garante que o padding não altere a largura total */
+}
+
+
+/* Efeito visual ao passar o mouse */
+.ver-mais:hover {
+    background-color: #005f73; /* Cor de fundo quando passa o mouse */
+}
+
+
+
+
+
+
+   /* Estilos para a seção 'Quem Somos' */
+   .quem-somos {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px; /* Espaçamento entre a imagem e o texto */
+    margin: 20px;
+}
+
+.quem-somos img {
+    width: 50vw; /* A imagem vai ocupar 50% da largura da tela */
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: cover;
+    border-radius: 20px; /* Tornando a imagem quadrada com cantos arredondados */
+}
+
+.quem-somos .text {
+    max-width: 600px;
+}
+
+
+
+
+
+
+
+
+
+
+/* CATALAGO */
+
