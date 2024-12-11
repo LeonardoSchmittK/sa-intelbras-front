@@ -19,7 +19,9 @@ header {
 }
 
 header img {
-    height: 40px; /* Aumenta o tamanho da logo */
+    height: 30px; /* Aumenta o tamanho da logo */
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
 
 header .search-bar {
@@ -30,10 +32,37 @@ header .search-bar {
 
 header input {
     width: 100%;
-    padding: 8px;
+    padding: 9px;
     border: 1px solid #ccc;
-    border-radius: 40px; /* Torna a barra de pesquisa mais arredondada */
+    border-radius: 20px; /* Torna a barra de pesquisa mais arredondada */
     font-size: 14px; /* Ajusta o tamanho da fonte */
+}
+
+.search-bar {
+    position: relative;
+    width: 300px; 
+}
+
+.input-with-icon {
+    width: 100%;
+    padding-left: 43px; 
+    box-sizing: border-box;
+    height: 40px; 
+    font-size: 16px;
+}
+
+#lupa{
+    height: 23px;
+    position: absolute;
+    left:31.5%;
+}
+
+footer{
+    padding-bottom: 20px;
+    padding-top: 25px;
+    position: absolute;
+    margin-bottom: 10px;
+    left: 40.2%;
 }
 
 
@@ -110,7 +139,7 @@ header .user {
 
 .product:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(192, 192, 192, 0.2);
 }
 
 .product img {
@@ -287,8 +316,14 @@ header .user {
     max-width: 600px;
 }
 
+h2 {
+    text-align: center;
+    font-size: 38px;
+}
 
-
+.text p{
+    text-align: justify;
+}
 
 
 
