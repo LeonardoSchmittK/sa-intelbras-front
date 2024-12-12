@@ -7,6 +7,7 @@ if (token) {
       'Authorization': `Bearer ${token}`,
       'Content-Type': 'application/json'
     },
+    credentials: 'include', 
   })
   .then(response => {
     if (!response.ok) {
@@ -17,5 +18,6 @@ if (token) {
   .then(data => document.querySelector(".user").innerHTML = `Olá, ${localStorage.getItem("username")} &#128515;`)
   .catch(error => console.error("Fetch Error:", error));
 } else {
-  console.warn('No token found in localStorage');
+  console.log("Não está logado, vá logar");
+  window.location.href  = "/src/html/login.html"
 }
