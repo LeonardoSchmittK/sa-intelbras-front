@@ -4,10 +4,9 @@ if (token) {
   fetch('http://localhost:3000/users/authenticate', {
     method: 'GET',
     headers: {
-      'Authorization': `Bearer ${token}`,
-      'Content-Type': 'application/json'
-    },
-    credentials: 'include', 
+      'Authorization': `Bearer ${token}`, 
+      'Content-Type': 'application/json',
+    }
   })
   .then(response => {
     if (!response.ok) {
@@ -15,8 +14,9 @@ if (token) {
     }
     return response.json();
   })
-  .then(data => document.querySelector(".user").innerHTML = `Olá, ${localStorage.getItem("username")} &#128515;`)
+  .then(data => document.querySelector(".user").innerHTML=`Olá, ${localStorage.getItem("username")} :)`)
   .catch(error => console.error("Fetch Error:", error));
+  
 } else {
   console.log("Não está logado, vá logar");
   window.location.href  = "/src/html/login.html"
