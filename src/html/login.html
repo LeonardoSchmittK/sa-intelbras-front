@@ -29,43 +29,48 @@
                   <div class="center-wrap">
                     <div class="section text-center">
                       <h4 class="mb-4 pb-3">Login</h4>
+                      <form id="loginForm">
+
                       <div class="form-group">
-                        <input type="email" class="form-style" placeholder="Email">
+                        <input type="email" required id="form-login-email" class="form-style" placeholder="Email">
                         <i class="input-icon uil uil-at"></i>
                       </div>
                       <div class="form-group mt-2">
-                        <input type="password" class="form-style" placeholder="Password">
+                        <input type="password" required id="form-login-password" class="form-style" placeholder="Password">
                         <i class="input-icon uil uil-lock-alt"></i>
                       </div>
-                      <a href="../html/index.html" class="btn mt-4">Login</a>
+                      <button type="submit" class="btn mt-4">Login</button>
+
                       <p class="mb-0 mt-4 text-center"><a href="../front/home.html" class="link">Forgot your
                           password?</a></p>
                     </div>
+                  </form>
+
                   </div>
                 </div>
                 <div class="card-back">
                   <div class="center-wrap">
                     <div class="section text-center">
                       <h4 class="mb-3 pb-3">Sign Up</h4>
-                      <div class="form-group">
-                        <input type="text" class="form-style" placeholder="Full Name">
-                        <i class="input-icon uil uil-user"></i>
-                      </div>
-                      <div class="form-group mt-2">
-                        <input type="tel" class="form-style" placeholder="Phone Number">
-                        <i class="input-icon uil uil-phone"></i>
-                      </div>
-                      <div class="form-group mt-2">
-                        <input type="email" class="form-style" placeholder="Email">
-                        <i class="input-icon uil uil-at"></i>
-                      </div>
-                      <div class="form-group mt-2">
-                        <input type="password" class="form-style" placeholder="Password">
-                        <i class="input-icon uil uil-lock-alt"></i>
-                      </div>
-                      <a href="../front/home.html" class="btn mt-4">Register</a>
-                    </div>
-                  </div>
+                      <form id="signUpForm">
+                        <div class="form-group">
+                          <input required type="text" id="form-username" class="form-style" placeholder="Full Name">
+                          <i class="input-icon uil uil-user"></i>
+                        </div>
+                        <div class="form-group mt-2">
+                          <input type="tel" class="form-style" id="form-phone" placeholder="Phone Number">
+                          <i class="input-icon uil uil-phone"></i>
+                        </div>
+                        <div class="form-group mt-2">
+                          <input required type="email" id="form-email" class="form-style" placeholder="Email">
+                          <i class="input-icon uil uil-at"></i>
+                        </div>
+                        <div class="form-group mt-2">
+                          <input required type="password" id="form-password" class="form-style" placeholder="Password">
+                          <i class="input-icon uil uil-lock-alt"></i>
+                        </div>
+                        <button type="submit" class="btn mt-4">Register</button>
+                      </form>
                 </div>
               </div>
             </div>
@@ -74,6 +79,9 @@
       </div>
     </div>
   </div>
+
+
+  <script src="../javascript/registroUsuario.js"></script>
 </body>
 
 </html>
