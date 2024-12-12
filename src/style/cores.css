@@ -25,37 +25,45 @@ header img {
 }
 
 header .search-bar {
-    flex-grow: 0; /* Remove o comportamento de crescer automaticamente */
-    width: 40%; /* Define um tamanho menor */
-    margin: 0 10px;
+    flex-grow: 0; 
+    width: 40%; 
+    padding-left: 10px;
+}
+
+#lupa {
+    height: 20px;
+    padding-top: 5px;
+
 }
 
 header input {
     width: 100%;
     padding: 9px;
-    border: 1px solid #ccc;
-    border-radius: 20px; /* Torna a barra de pesquisa mais arredondada */
-    font-size: 14px; /* Ajusta o tamanho da fonte */
+    border: 0;
+    font-size: 14px; 
+    outline: 0;
 }
 
 .search-bar {
     position: relative;
-    width: 300px; 
+    width: 30% !important; 
+    display: flex;
+    align-items: flex-start ;
+    flex-direction: row;
+    border: 1px solid #ccc;
+    border-radius: 20px; 
+
 }
 
 .input-with-icon {
-    width: 100%;
-    padding-left: 43px; 
+    width: 90% !important;
+    padding-left: 10px; 
     box-sizing: border-box;
     height: 40px; 
     font-size: 16px;
 }
 
-#lupa{
-    height: 23px;
-    position: absolute;
-    left:31.5%;
-}
+
 
 footer{
     padding-bottom: 20px;

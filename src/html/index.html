@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <base href="/src/html/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Intelbras - Protótipo</title>
     <link rel="stylesheet" href="../style/cores.css">
+    <script src="../javascript/checarJWTLogado.js"></script>
     <script src="../javascript/script.js"></script>
 </head>
 <body>
     <header>
         <img src="../img/logo.png" alt="Intelbras Logo" class="logo">
         <div class="search-bar">
+            <img src="../img/lupa.png" alt="Lupa" id="lupa">
             <input type="text" placeholder="Digite para buscar..." class="input-with-icon" oninput="pesquisarProdutos(this.value)" >
         </div>
-        <img src="../img/lupa.png" alt="Lupa" id="lupa">
-        <div class="user">
-            Olá, seja bem-vindo! &#128515;
-        </div>
+        <div class="user"> </div>
     </header>
     <div class="banner">
         <h1>Bem-vindo à Intelbras</h1>
