@@ -7,6 +7,8 @@ body {
     padding: 0;
     box-sizing: border-box;
     background-color: #ffffff; /* Fundo geral mais suave */
+    width: 100%;
+    height: 100%;
 }
 
 header {
@@ -37,6 +39,9 @@ header .search-bar {
 }
 
 header input {
+    position: absolute;
+    top:-19px;
+    left:-10%;
     width: 100%;
     padding: 9px;
     border: 0;
@@ -64,6 +69,12 @@ header input {
 }
 
 
+#lupa{
+    height: 23px;
+    position: absolute;
+    left:28.4%;
+}
+
 
 footer{
     padding-bottom: 20px;
@@ -75,8 +86,21 @@ footer{
 
 
 header .user {
+    position: static;
     font-size: 14px;
     color: #333;
+}
+
+.user p {
+    position: relative;
+    right:50%;
+}
+
+#usu {
+    position: absolute;
+    height: auto;
+    width: 39px;
+    right: 1%;
 }
 
 .banner {
@@ -300,10 +324,6 @@ header .user {
 }
 
 
-
-
-
-
    /* Estilos para a seção 'Quem Somos' */
    .quem-somos {
     display: flex;
@@ -322,22 +342,89 @@ header .user {
 
 .quem-somos .text {
     max-width: 600px;
+    
 }
 
 h2 {
     text-align: center;
     font-size: 38px;
+    position: relative;
+    bottom: 100px;
 }
 
 .text p{
     text-align: justify;
+    position: relative;
+    bottom: 70px;
+    font-size: 22px;
 }
 
+.text #fale{
+    text-align: justify;
+    position: relative;
+    top: 85px;
+    font-size: 22px;
+}
 
+/* Logout */
+.dropdown-menu {
+    top: 60px;
+    display: none;
+    position: absolute;
+    color: #007a00;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    padding: 40px 62px;
+    z-index: 10;
+    margin-top: 5px; /* Aparece logo abaixo da imagem */
+    right: 1%;
+}
 
+.dropdown-menu::after {
+    content: "";
+    position: absolute;
+    bottom: -10px; /* Distância da borda inferior da caixa */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent; /* Seta da esquerda */
+    border-right: 10px solid transparent; /* Seta da direita */
+    border-top: 10px solid white; /* Cor da seta */
+}
 
+.dropdown-menu img{
+    position: relative;
+    height: 50px;
+    width: auto;
+    right: 45px;
+}
 
+.dropdown-menu p{
+    position: absolute;
+    right: 40px;
+}
 
+.dropdown-menu button{
+    position: absolute;
+    bottom: 20px;
+
+}
+
+/* Botão dentro do menu */
+#logout-button {
+    background-color: transparent;
+    border: none;
+    color: #333;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#logout-button:hover {
+    color: rgb(10, 151, 29);
+    text-decoration: underline;
+}
 
 /* CATALAGO */
 
