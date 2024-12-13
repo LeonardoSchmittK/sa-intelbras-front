@@ -5,19 +5,24 @@ if (token) {
     method: 'GET',
     headers: {
       'Authorization': `Bearer ${token}`, 
-      'Content-Type': 'application/json',
-    }
+      'Content-Type': 'application/json', 
+    },
   })
-  .then(response => {
-    if (!response.ok) {
-      throw new Error(`HTTP Error: ${response.status}`);
-    }
-    return response.json();
-  })
-  .then(data => document.querySelector(".user").innerHTML=`Olá, ${localStorage.getItem("username")} :)`)
-  .catch(error => console.error("Fetch Error:", error));
-  
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`HTTP Error: ${response.status}`);
+      }
+      return response.json(); 
+    })
+    .then(data => {
+      document.querySelector(".user").innerHTML = `Olá, ${localStorage.getItem("username")} :)`;
+    })
+    .catch(error => {
+      console.error("Fetch Error:", error);
+      localStorage.removeItem('token'); 
+      window.location.href = "/src/html/login.html"; 
+    });
 } else {
   console.log("Não está logado, vá logar");
-  window.location.href  = "/src/html/login.html"
+  window.location.href = "/src/html/login.html";
 }
