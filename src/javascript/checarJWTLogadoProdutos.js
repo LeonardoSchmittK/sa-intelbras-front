@@ -25,7 +25,11 @@ if (token) {
         document.querySelector(".cadastrarProduto").style.display="block"
         setTimeout(()=>{
 
-            [...document.querySelectorAll(".removeProductBtn")].map((i)=>i.style.display="block")
+            [...document.querySelectorAll(".removeProductBtn")].map((i)=>i.style.display="block");
+
+            [...document.querySelectorAll(".updateProductBtn")].map((i)=>i.style.display="block")
+
+
         },500)
         
       }else {
@@ -33,7 +37,9 @@ if (token) {
         document.querySelector(".cadastrarProduto").style.display="none"
         setTimeout(()=>{
 
-            [...document.querySelectorAll(".removeProductBtn")].map((i)=>i.style.display="none")
+            [...document.querySelectorAll(".removeProductBtn")].map((i)=>i.style.display="none");
+            [...document.querySelectorAll(".updateProductBtn")].map((i)=>i.style.display="none")
+
 
         },500)
 

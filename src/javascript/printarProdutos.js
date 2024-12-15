@@ -32,11 +32,14 @@ document.addEventListener('DOMContentLoaded', async () => {
             `;
         
             productElement.innerHTML = `
-                <button class="removeProductBtn" style="display:none" data-id="${product.id}" onclick="deleteProduct(this)">Remover</button>
-                <img src="${product.imageUrl}" alt="${product.name}" class="modal-image">
-                <h3>${product.name}</h3>
-                <button class="openModalBtn ver-mais" onclick="openModal('${modalId}')">Ver mais</button>
-            `;
+            <button class="removeProductBtn" style="display:none" data-id="${product.id}" onclick="deleteProduct(this)">Remover</button>
+            <button class="updateProductBtn" style="display:none" data-id="${product.id}" onclick="openModalUpdate(this)">Editar</button>
+            <button class="confirmUpdateProductBtn" style="display:none" data-id="${product.id}  " >Confirmar</button>
+            <img src="${product.imageUrl}" alt="${product.name}" class="modal-image">
+            <h3>${product.name}</h3>
+            <button class="openModalBtn ver-mais" onclick="openModal('${modalId}')">Ver mais</button>
+        `;
+        
             
             productsContainer.appendChild(productElement);
             document.body.appendChild(modal); 
@@ -56,6 +59,15 @@ document.addEventListener('DOMContentLoaded', async () => {
             document.querySelector(".overlay").style.display="block"
 
         }
+
+        function openModalUpdate(btn) {
+            const parentDiv = btn.closest('.product'); 
+            parentDiv.querySelector(".confirmUpdateProductBtn").style.display="block"
+            parentDiv.querySelector("h3").setAttribute("contenteditable",true)
+            parentDiv.querySelector("h3").focus()
+
+            parentDiv.querySelector(".confirmUpdateProductBtn").onclick= () => updateProduct(btn.getAttribute("data-id"), parentDiv.querySelector("h3").innerText)
+        }
         
         function fecharModall(modalId) {
             const modal = document.getElementById(modalId);
@@ -63,3 +75,35 @@ document.addEventListener('DOMContentLoaded', async () => {
             document.querySelector(".overlay").classList.add("removeOverlay")
 
         }
+
+        const updateProduct = async (id,newName) => {
+      
+            console.log(newName);
+            try {
+                const response = await fetch(`http://localhost:3000/products/${id}`, {
+                    method: 'PUT',
+                    headers: {
+                      'Content-Type': 'application/json', 
+                    },
+                    body: JSON.stringify({ 
+                      name: newName, 
+                    }), 
+                  });
+          
+              if (!response.ok) {
+                const errorData = await response.json();
+                console.error('Erro ao atualizar o produto:', errorData);
+                return errorData;
+              }
+          
+              const updatedProduct = await response.json();
+              console.log('Produto atualizado com sucesso:', updatedProduct);
+              location.reload()
+              return updatedProduct;
+            } catch (error) {
+              console.error('Erro na requisição:', error);
+              throw error;
+            }
+          };
+          
+    
