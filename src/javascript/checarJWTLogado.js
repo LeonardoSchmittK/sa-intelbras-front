@@ -25,7 +25,7 @@ if (token) {
         document.querySelector(".cadastrarProduto").style.display="block"
         
       }else {
-          document.querySelector(".sobreNos").style.display="none"
+          document.querySelector(".sobreNos").style.display="block"
         document.querySelector(".cadastrarProduto").style.display="none"
 
       }

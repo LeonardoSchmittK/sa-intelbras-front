@@ -29,7 +29,7 @@ if (token) {
         },500)
         
       }else {
-          document.querySelector(".sobreNos").style.display="none"
+          document.querySelector(".sobreNos").style.display="block"
         document.querySelector(".cadastrarProduto").style.display="none"
         setTimeout(()=>{
 
