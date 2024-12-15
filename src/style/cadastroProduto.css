@@ -61,6 +61,7 @@ input[type="file"] {
     border-radius: 40px;
     border: 1px solid #BBCAD2;
     color: black;
+    cursor: pointer;
 }
 
 button {
@@ -69,6 +70,8 @@ button {
     cursor: pointer;
     border: none;
     transition: background-color 0.3s;
+    text-transform: uppercase;
+    font-weight: 600;
 }
 
 button:hover {
@@ -158,4 +161,14 @@ button:hover {
 
 .radio-label input[type="radio"]:focus {
     outline: none;
+}
+
+input,textarea {
+    border: 2px solid rgba(34, 33, 33, 0.185)
+}
+
+
+
+input:focus, textarea:focus {
+    outline: none; 
 }

@@ -19,12 +19,12 @@ header {
 }
 
 header img {
-    height: 40px; /* Aumenta o tamanho da logo */
+    height: 40px;
 }
 
 header .search-bar {
-    flex-grow: 0; /* Remove o comportamento de crescer automaticamente */
-    width: 40%; /* Define um tamanho menor */
+    flex-grow: 0;
+    width: 40%; 
     margin: 0 10px;
 }
 
@@ -32,8 +32,8 @@ header input {
     width: 100%;
     padding: 8px;
     border: 1px solid #ccc;
-    border-radius: 40px; /* Torna a barra de pesquisa mais arredondada */
-    font-size: 14px; /* Ajusta o tamanho da fonte */
+    border-radius: 40px; 
+    font-size: 14px;
 }
 
 
@@ -46,15 +46,15 @@ header .user {
     background-color: #333;
     color: #fff;
     padding: 40px 20px;
-    text-align: left; /* Alinha o texto à esquerda */
-    background-image: url('../img/intelisa.png'); /* Adicione a imagem do banner aqui */
+    text-align: left; 
+    background-image: url('../img/intelisa.png');
     background-size: cover;
     background-position: center;
-    height: 300px; /* Ajuste conforme necessário */
+    height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start; /* Alinha os itens à esquerda */
+    align-items: flex-start;
 }
 
 .banner h1 {

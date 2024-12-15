@@ -120,8 +120,11 @@ footer{
 
 /* Estilizando para telas menores */
 @media (max-width: 768px) {
+    .logo {
+        display: none;
+    }
     header {
-        flex-direction: column;
+        flex-direction: row;
         text-align: center;
     }
 

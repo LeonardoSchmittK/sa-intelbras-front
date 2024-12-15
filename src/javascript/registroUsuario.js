@@ -56,6 +56,7 @@ const signUpUser = async (e) => {
         console.log('Login successful:', data);
         localStorage.setItem('token', data.token);
         localStorage.setItem('username', data.user.username);
+        localStorage.setItem('role', data.user.role);
         window.location.replace("http://127.0.0.1:5500/src/html/index.html");
       } else {
         console.error('Login failed:', data.error);

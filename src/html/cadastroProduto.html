@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Produtos</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="../style/cadastroProduto.css">
 </head>
 
@@ -13,16 +15,23 @@
 
     <!-- img da intelbras junto com a barra de pesquisa e user-->
     <div class="container">
-        <h1>Cadastro de Produto</h1>
-        <form id="productForm">
+        <a href="index.html" style="color:green">
+        <div style="display: flex; align-items: center;margin-bottom: 2em; cursor: pointer;">
+                <i class="uil uil-arrow-left" style="font-size: 25px;"></i>
+                <span> Voltar </span>
+            </div>
+        </a>
+        <h2 style="text-align: left; margin-bottom: 25px;">Cadastro de Produto</h2>
+
+        <form id="productForm" enctype="multipart/form-data">
             <label for="productName">Insira o nome do produto</label>
             <input type="text" id="productName" required>
-
+        
             <label for="productDescription">Insira a descrição do produto:</label>
             <textarea id="productDescription" rows="4" required></textarea>
-
+        
             <p>Selecione a categoria do produto:</p>
-        <div class="checkbox-group">
+            <div class="checkbox-group">
                 <label class="radio-label">
                     <input type="radio" name="productCategory" value="Roteador">
                     Roteador
@@ -40,22 +49,22 @@
                     Campainha
                 </label>
                 <label class="radio-label">
-                    <input type="radio" name="productCategory" value="Telefones">
-                    Telefones
+                    <input type="radio" name="productCategory" value="Fechaduras">
+                    Fechaduras
                 </label>
             </div>
-
+        
             <p>Selecione uma imagem:</p>
             <label for="productImage" class="testeimg"><strong>Upload da imagem</strong></label>
             <input type="file" id="productImage" accept="image/*" required>
-
+        
             <button type="submit">Cadastrar produto</button>
         </form>
 
-        <!-- so para ter algo visivel nao ficara na verçao final -->
-        <div class="products" id="productList">
-            <h2>Produtos Cadastrados</h2>
-            <!-- Produtos adicionados aparecerão aqui -->
+        <div class="products" id="productList" style="display: none;">
+            <h2 style="text-align: left; margin-bottom: 25px;">Produtos cadastrados</h2>
+            
+            
         </div>
     </div>
     <script src="../javascript/cadastroProduto.js"></script>

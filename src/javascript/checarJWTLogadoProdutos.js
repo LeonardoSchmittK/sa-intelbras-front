@@ -23,10 +23,19 @@ if (token) {
       if(data.user.isAdmin){
         document.querySelector(".sobreNos").style.display="none"
         document.querySelector(".cadastrarProduto").style.display="block"
+        setTimeout(()=>{
+
+            [...document.querySelectorAll(".removeProductBtn")].map((i)=>i.style.display="block")
+        },500)
         
       }else {
           document.querySelector(".sobreNos").style.display="none"
         document.querySelector(".cadastrarProduto").style.display="none"
+        setTimeout(()=>{
+
+            [...document.querySelectorAll(".removeProductBtn")].map((i)=>i.style.display="none")
+
+        },500)
 
       }
     })

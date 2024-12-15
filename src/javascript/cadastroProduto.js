@@ -1,59 +1,47 @@
+document.getElementById('productForm').addEventListener('submit', async (event) => {
+    event.preventDefault(); 
 
-const form = document.getElementById("productForm");
-const productList = document.getElementById("productList");
-const fileInput = document.getElementById("productImage");
-const uploadButton = document.querySelector("label[for='productImage']");
-
-// Função para atualizar o nome do botão com o nome do arquivo
-fileInput.addEventListener('change', function () {
-    const fileName = fileInput.files[0]?.name;
-    if (fileName) {
-        uploadButton.innerHTML = `<strong>${fileName}</strong>`;
-    }
-});
-
-form.addEventListener("submit", function (event) {
-    event.preventDefault(); // Evita o envio do formulário
-
-    const name = document.getElementById("productName").value;
-    const description = document.getElementById("productDescription").value;
-    const imageInput = document.getElementById("productImage");
-    const file = imageInput.files[0];
-
-    if (!file) {
-        alert("Por favor, insira uma imagem do produto.");
+    const name = document.getElementById('productName').value;
+    const description = document.getElementById('productDescription').value;
+    const category = document.querySelector('input[name="productCategory"]:checked')?.value;
+    const image = document.getElementById('productImage').files[0]; // Get the file from the input
+    console.log(image)
+    if (!category) {
+        alert('Por favor, selecione uma categoria.');
         return;
     }
 
-    const selectedCategories = Array.from(document.querySelectorAll('input[name="productCategory"]:checked'))
-        .map(checkbox => checkbox.value)
-        .join(', ');
-
-    if (!selectedCategories) {
-        alert("Por favor, selecione ao menos uma categoria.");
+    if (!image) {
+        alert('Por favor, selecione uma imagem.');
         return;
     }
 
-    const reader = new FileReader();
-    reader.onload = function (e) {
-        const imageSrc = e.target.result;
+    const formData = new FormData();
+    formData.append('name', name);
+    formData.append('description', description);
+    formData.append('category', category);
+    formData.append('image', image); // Append the image file
 
-        const productCard = document.createElement("div");
-        productCard.classList.add("product-card");
+    try {
+        const response = await fetch('http://localhost:3000/products', {
+            method: 'POST',
+            body: formData, 
+        });
 
-        productCard.innerHTML = `
-                    <img src="${imageSrc}" alt="${name}">
-                    <div class="product-info">
-                        <h2>${name}</h2>
-                        <p><span>Categorias:</span> ${selectedCategories}</p>
-                        <p>${description}</p>
-                    </div>
-                `;
+        // Handle the response
+        const result = await response.json();
 
-        productList.appendChild(productCard);
-        form.reset();
-        uploadButton.innerHTML = `<strong>Upload da imagem</strong>`;  // Resetando o botão para o texto original
-    };
-
-    reader.readAsDataURL(file);
+        if (response.ok) {
+            document.querySelector("#productList").style.display = "block";
+            document.querySelector("#productList").innerHTML += `<div style="display:flex;">
+                <i class="uil uil-check-circle"></i>
+                <p>${name} cadastrado com sucesso!</p></div></br>`;
+            document.getElementById('productForm').reset();
+        } else {
+            alert(result.message || 'Erro ao cadastrar o produto.');
+        }
+    } catch (error) {
+        console.error('Erro ao enviar a solicitação:', error);
+        alert('Ocorreu um erro inesperado. Tente novamente mais tarde.');
+    }
 });

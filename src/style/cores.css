@@ -30,34 +30,34 @@ header .search-bar {
     flex-grow: 0; 
     width: 40%; 
     padding-left: 10px;
+    border: 1px solid rgba(128, 128, 128, 0.137);
 }
 
-#lupa {
-    height: 20px;
-    padding-top: 5px;
-
-}
 
 header input {
-    position: absolute;
-    top:-19px;
-    left:-10%;
+    flex: 1;
     width: 100%;
     padding: 9px;
     border: 0;
     font-size: 14px; 
     outline: 0;
+    border-radius: 50px;
+}
+
+#lupa {
+    height: 20px;
+    width: 20px;
+    margin-top: 10px;
 }
 
 .search-bar {
     position: relative;
-    width: 30% !important; 
+    width: 100%; 
     display: flex;
     align-items: flex-start ;
     flex-direction: row;
-    border: 1px solid #ccc;
     border-radius: 20px; 
-
+    
 }
 
 .input-with-icon {
@@ -69,11 +69,7 @@ header input {
 }
 
 
-#lupa{
-    height: 23px;
-    position: absolute;
-    left:28.4%;
-}
+
 
 
 footer{
@@ -89,6 +85,9 @@ header .user {
     position: static;
     font-size: 14px;
     color: #333;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .user p {
@@ -189,9 +188,9 @@ header .user {
 }
 
 /* Estilizando para telas menores */
-@media (max-width: 768px) {
+@media (max-width: 638px) {
     header {
-        flex-direction: column;
+        flex-direction: row;
         text-align: center;
     }
 
@@ -207,6 +206,10 @@ header .user {
 
     .product {
         width: 100%;
+    }
+
+    .logo {
+        display: none;
     }
 }
 
@@ -426,5 +429,34 @@ h2 {
     text-decoration: underline;
 }
 
-/* CATALAGO */
+/* Create a gray overlay effect */
+.overlay {
+    display: none;
+    position: fixed; /* Position it over the entire page */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.705); /* Semi-transparent gray */
+    z-index: 999; /* Make sure it's above other content */
+  }
+  
+  /* Style for the modal content */
+  .modal-content {
+    position: relative;
+    z-index: 1000; /* Ensure modal content is above the overlay */
+    background-color: white; /* Or any other background color */
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    margin: 10% auto; /* Center the modal */
+  }
+  
+  /* Optional: Style the body to prevent scrolling when the modal is open */
+  body.modal-open {
+    overflow: hidden;
+  }
 
+.removeOverlay {
+    display: none !important;
+}

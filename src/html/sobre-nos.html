@@ -7,29 +7,37 @@
     <title>Sobre Nós - Intelbras</title>
     <link rel="stylesheet" href="../style/cores.css">
     <script src="../javascript/checarJWTLogado.js"></script>
+    <script src="../javascript/script.js"></script>
+    <script src="../javascript/logout.js"></script>
 </head>
 
 <body>
     <header>
-        <img src="../img/logo.png" alt="Intelbras Logo">
+        <img src="../img/logo.png" alt="Intelbras Logo" class="logo">
         <div class="search-bar">
-            <input type="text" placeholder="Digite para buscar..." class="input-with-icon">
+            <img src="../img/lupa.PNG" alt="Lupa" id="lupa"> 
+            <input type="text" placeholder="Digite para buscar..." class="input-with-icon"  oninput="pesquisarProdutos(this.value)" >
         </div>
-        <img src="../img/lupa.png" alt="Lupa" id="lupa">
-        <div class="user">
-            Olá, seja bem-vindo! &#128515;
+        <div class="user" >  
+            <p>Olá, seja bem-vindo!</p>
         </div>
     </header>
-
-    <div class="banner">
-        <h1>Sobre a Intelbras</h1>
-        <p>Informações sobre a empresa, missão, visão, etc...</p>
+    <div class="dropdown-menu" id="dropdown-menu">
+        <p class="username">Usuário</p>
+        <img src="../img/usuarioDefaultJane.png" alt="usuário">
+        <button 
+         id="logout-button" onclick="logOut()">Sair</button>
     </div>
-
+    <div class="banner">
+        <h1>Bem-vindo à Intelbras</h1>
+        <p style="margin: 20px; margin-top: 0">Conheça nossos produtos de segurança e tecnologia.</p>
+    </div>
     <nav class="menu">
-        <a href="index.html">Produtos</a>
-        <a href="sobre-nos.html" class="active">Sobre nós</a>
-        <a href="catalago.html">Catálogo</a>
+        <a href="index.html" class="produtos">Catálogo</a>
+        <a href="sobre-nos.html" class="sobreNos active" >Sobre nós</a>
+        <a href="catalago.html" class="catalogo">Produtos</a>
+        <a href="cadastroProduto.html" class="cadastrarProduto">Cadastrar</a>
+
     </nav>
 
     <section class="quem-somos">
