@@ -1,0 +1,28 @@
+  #toast-container > div {
+    opacity: 1  !important;
+    width: 320px !important;
+  }
+
+  .toast.toast-success {
+    background-color: #00B300 !important; 
+    color: white !important;
+  }
+
+  .toast-error {
+    background-color: #dc3545 !important; 
+    color: white !important;
+  }
+
+  .toast-info {
+    background-color: #17a2b8 !important; 
+    color: white !important;
+  }
+
+  .toast-warning {
+    background-color: #ffc107 !important; 
+    color: black !important;
+  }
+
+  .toast-progress {
+    background-color: rgba(255, 255, 255, 0.7) !important; 
+  }

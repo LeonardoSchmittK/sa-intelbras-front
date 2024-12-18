@@ -21,7 +21,7 @@ const signUpUser = async (e) => {
   
       if (response.ok) {
         console.log('Usuário cadastrado com sucesso:', data);
-        alert('Usuário cadastrado com sucesso!');
+        toastr.success("Usuário cadastrado com sucesso!");
         checkbox.checked = false;  
       } else {
         console.error('Sign-up error:', data.error);

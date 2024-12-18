@@ -7,19 +7,17 @@ const deleteProduct = async (btn) => {
       const result = await response.json(); 
   
       if (response.ok) {
-        confirm("Produto deletado!")
-
-
+        toastr.success("Produto removido com sucesso!");
         const parentDiv = btn.closest('.product'); 
-  if (parentDiv) {
-    parentDiv.parentNode.removeChild(parentDiv); 
-  }
+
+      if (parentDiv) {
+        parentDiv.parentNode.removeChild(parentDiv); 
+      }
       } else {
-        alert(result.message || 'Erro ao deletar o produto.');
+        toastr.error("Erro ao deletar o produto.");
       }
     } catch (error) {
-      console.error('Erro ao enviar a solicitação:', error);
-      alert('Ocorreu um erro inesperado. Tente novamente mais tarde.');
+        toastr.error("Erro ao deletar produto. Tente mais tarde.");
     }
   };
   

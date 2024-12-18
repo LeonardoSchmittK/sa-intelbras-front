@@ -1,9 +1,11 @@
+
 const fileInput = document.getElementById("productImage");
 const uploadButton = document.querySelector(".uploadButton");
 fileInput.addEventListener('change', function () {
     const fileName = fileInput.files[0]?.name;
     if (fileName) {
         uploadButton.innerHTML = `<strong>${fileName}</strong>`;
+        
     }
 });
 
@@ -17,15 +19,14 @@ document.getElementById('productForm').addEventListener('submit', async (event) 
     const image = document.getElementById('productImage').files[0]; 
 
     if (!category) {
-        alert('Por favor, selecione uma categoria.');
+        toastr.warning("Por favor, selecione uma categoria.");
         return;
     }
 
     if (!image) {
-        alert('Por favor, selecione uma imagem.');
+        toastr.warning("Por favor, selecione uma imagem.");
         return;
     }
-
     const formData = new FormData();
     formData.append('name', name);
     formData.append('description', description);
@@ -54,10 +55,11 @@ document.getElementById('productForm').addEventListener('submit', async (event) 
                 </br>`;
             document.getElementById('productForm').reset();
         } else {
-            alert(result.message || 'Erro ao cadastrar o produto.');
+            toastr.error("Erro ao cadastrar o produto. Volte mais tarde.");
+
         }
     } catch (error) {
-        console.error('Erro ao enviar a solicitação:', error);
-        alert('Ocorreu um erro inesperado. Tente novamente mais tarde.');
+        toastr.error("Erro ao cadastrar o produto. Volte mais tarde.");
     }
 });
+
