@@ -562,7 +562,7 @@ body.modal-open {
 
 .updateProductBtn {
     right: 30px;
-    bottom: 5.5px;
+    bottom: 10px;
     background-color: white;
     color: #00b300;
     border: 1px solid #d3d3d3; /* Borda cinza claro */
@@ -579,7 +579,7 @@ body.modal-open {
 
 .removeProductBtn {
     left: 25px;
-    top: 15px;
+    top: 14px;
     background-color: white;
     color: #00b300;
     border: 1px solid #d3d3d3; /* Borda cinza claro */
@@ -624,4 +624,18 @@ body.modal-open {
 .confirmUpdateProductBtn:hover {
     color: #f9f9f9;
     background-color: #007a00; /* Leve alteração no fundo ao passar o mouse */
+}
+/* Nome Produto */
+
+.product h3{
+    width: 100%; /* Largura total do container */
+    max-width: 300px; /* Define a largura máxima */
+    height: 3em; /* Altura para aproximadamente 2 linhas */
+    line-height: 1.5em; /* Espaçamento entre as linhas */
+    overflow-y: auto; /* Adiciona rolagem vertical quando necessário */
+    word-wrap: break-word; /* Quebra palavras longas */
+    border: 1px solid #ffffff; /* Adiciona um quadrado ao redor */
+    padding: 5px;
+    box-sizing: border-box; /* Inclui padding no cálculo da largura */
+    font-size: 14px; /* Tamanho do texto */
 }
