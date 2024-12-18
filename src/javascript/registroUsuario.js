@@ -9,7 +9,7 @@ const signUpUser = async (e) => {
     };
   
     try {
-      const response = await fetch('http://localhost:3000/users/signUp', {
+      const response = await fetch('https://sa-intelbras-api.onrender.com/users/signUp', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -39,7 +39,7 @@ const signUpUser = async (e) => {
     try {
        const email = document.querySelector("#form-login-email").value
        const password = document.querySelector("#form-login-password").value
-       const response = await fetch('http://localhost:3000/users/login', {
+       const response = await fetch('https://sa-intelbras-api.onrender.com/users/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

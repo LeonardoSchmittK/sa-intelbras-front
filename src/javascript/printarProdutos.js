@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', async () => {
     try {
-        const response = await fetch('http://localhost:3000/products');
+        const response = await fetch('https://sa-intelbras-api.onrender.com/products');
         
         if (!response.ok) {
             throw new Error('Erro ao carregar os produtos');
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       
             console.log(newName);
             try {
-                const response = await fetch(`http://localhost:3000/products/${id}`, {
+                const response = await fetch(`https://sa-intelbras-api.onrender.com/products/${id}`, {
                     method: 'PUT',
                     headers: {
                       'Content-Type': 'application/json', 

@@ -6,7 +6,7 @@ const logOut = async () => {
     }
   
     try {
-      const response = await fetch('http://localhost:3000/users/logout', {
+      const response = await fetch('https://sa-intelbras-api.onrender.com/users/logout', {
         method: 'POST', 
         headers: {
           'Authorization': `Bearer ${token}`,

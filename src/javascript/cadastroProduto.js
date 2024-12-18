@@ -1,3 +1,13 @@
+const fileInput = document.getElementById("productImage");
+const uploadButton = document.querySelector(".uploadButton");
+fileInput.addEventListener('change', function () {
+    const fileName = fileInput.files[0]?.name;
+    if (fileName) {
+        uploadButton.innerHTML = `<strong>${fileName}</strong>`;
+    }
+});
+
+
 document.getElementById('productForm').addEventListener('submit', async (event) => {
     event.preventDefault(); 
 
@@ -23,7 +33,7 @@ document.getElementById('productForm').addEventListener('submit', async (event) 
     formData.append('image', image); // Append the image file
 
     try {
-        const response = await fetch('http://localhost:3000/products', {
+        const response = await fetch('https://sa-intelbras-api.onrender.com/products', {
             method: 'POST',
             body: formData, 
         });

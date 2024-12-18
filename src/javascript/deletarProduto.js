@@ -1,6 +1,6 @@
 const deleteProduct = async (btn) => {
     try {
-      const response = await fetch(`http://localhost:3000/products/${btn.getAttribute("data-id")}`, {
+      const response = await fetch(`https://sa-intelbras-api.onrender.com/products/${btn.getAttribute("data-id")}`, {
         method: 'DELETE', 
       });
   

@@ -6,7 +6,7 @@
 //             return { isAdmin: false, roles: [] };
 //         }
 
-//         const response = await fetch('http://localhost:3000/users/permissions', {
+//         const response = await fetch('https://sa-intelbras-api.onrender.com/users/permissions', {
 //             method: 'GET',
 //             headers: {
 //                 Authorization: `Bearer ${token}`,
