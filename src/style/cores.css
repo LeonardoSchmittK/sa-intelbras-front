@@ -6,7 +6,8 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #ffffff; /* Fundo geral mais suave */
+    background-color: #ffffff;
+    /* Fundo geral mais suave */
     width: 100%;
     height: 100%;
 }
@@ -21,14 +22,15 @@ header {
 }
 
 header img {
-    height: 30px; /* Aumenta o tamanho da logo */
+    height: 30px;
+    /* Aumenta o tamanho da logo */
     margin-bottom: 5px;
     margin-top: 5px;
 }
 
 header .search-bar {
-    flex-grow: 0; 
-    width: 40%; 
+    flex-grow: 0;
+    width: 40%;
     padding-left: 10px;
     border: 1px solid rgba(128, 128, 128, 0.137);
 }
@@ -39,7 +41,7 @@ header input {
     width: 100%;
     padding: 9px;
     border: 0;
-    font-size: 14px; 
+    font-size: 14px;
     outline: 0;
     border-radius: 50px;
 }
@@ -52,27 +54,24 @@ header input {
 
 .search-bar {
     position: relative;
-    width: 100%; 
+    width: 100%;
     display: flex;
-    align-items: flex-start ;
+    align-items: flex-start;
     flex-direction: row;
-    border-radius: 20px; 
-    
+    border-radius: 20px;
+
 }
 
 .input-with-icon {
     width: 90% !important;
-    padding-left: 10px; 
+    padding-left: 10px;
     box-sizing: border-box;
-    height: 40px; 
+    height: 40px;
     font-size: 16px;
 }
 
 
-
-
-
-footer{
+footer {
     padding-bottom: 20px;
     padding-top: 25px;
     position: absolute;
@@ -92,7 +91,7 @@ header .user {
 
 .user p {
     position: relative;
-    right:50%;
+    right: 50%;
 }
 
 #usu {
@@ -106,20 +105,24 @@ header .user {
     background-color: #333;
     color: #fff;
     padding: 40px 20px;
-    text-align: left; /* Alinha o texto à esquerda */
-    background-image: url('../img/intelisa.png'); /* Adicione a imagem do banner aqui */
+    text-align: left;
+    /* Alinha o texto à esquerda */
+    background-image: url('../img/intelisa.png');
+    /* Adicione a imagem do banner aqui */
     background-size: cover;
     background-position: center;
-    height: 300px; /* Ajuste conforme necessário */
+    height: 300px;
+    /* Ajuste conforme necessário */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start; /* Alinha os itens à esquerda */
+    align-items: flex-start;
+    /* Alinha os itens à esquerda */
 }
 
 .banner h1 {
     font-size: 36px;
-    margin:  20px;
+    margin: 20px;
 }
 
 .banner p {
@@ -144,7 +147,8 @@ header .user {
     transition: background-color 0.3s, border 0.3s;
 }
 
-.menu a.active, .menu a:hover {
+.menu a.active,
+.menu a:hover {
     background-color: #007a00;
     border: 2px solid white;
 }
@@ -231,15 +235,22 @@ header .user {
 
 /* Modal */
 .modal {
-    display: none; /* Oculta o modal por padrão */
-    position: fixed; /* Fixa o modal na tela */
-    top: 50%; /* Centraliza verticalmente */
-    left: 50%; /* Centraliza horizontalmente */
-    transform: translate(-50%, -50%); /* Ajusta o modal para o centro */
-    z-index: 1000; /* Garante que o modal fique na frente */
+    display: none;
+    /* Oculta o modal por padrão */
+    position: fixed;
+    /* Fixa o modal na tela */
+    top: 50%;
+    /* Centraliza verticalmente */
+    left: 50%;
+    /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%);
+    /* Ajusta o modal para o centro */
+    z-index: 1000;
+    /* Garante que o modal fique na frente */
     width: 100%;
-    max-width: 400px; /* Define a largura máxima do modal */
-   
+    max-width: 400px;
+    /* Define a largura máxima do modal */
+
 }
 
 .modal-content {
@@ -248,7 +259,8 @@ header .user {
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    max-width: 100%; /* Evita que o conteúdo ultrapasse o modal */
+    max-width: 100%;
+    /* Evita que o conteúdo ultrapasse o modal */
 }
 
 .modal-content img {
@@ -264,13 +276,13 @@ header .user {
     margin-top: 10px;
     font-size: 20px;
     font-weight: bold;
-    
+
 }
 
 .modal-content p {
     margin-top: 10px;
     font-size: 16px;
-    
+
     text-align: left;
 }
 
@@ -288,64 +300,88 @@ header .user {
 .products {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* Espaçamento entre os produtos */
-    justify-content: center; /* Centraliza os produtos */
+    gap: 20px;
+    /* Espaçamento entre os produtos */
+    justify-content: center;
+    /* Centraliza os produtos */
 }
 
 /* Cada produto */
 .product {
     display: flex;
-    flex-direction: column; /* Organiza o conteúdo de cima para baixo */
-    align-items: center; /* Alinha o conteúdo ao centro */
-    justify-content: space-between; /* Espaço uniforme entre o conteúdo */
-    width: 225px; /* Define a largura fixa dos produtos */
-    height: 300px; /* Ajusta a altura para ficar mais compacta */
-    text-align: center; /* Centraliza o conteúdo */
-    padding: 10px; /* Adiciona padding para o conteúdo */
-    box-sizing: border-box; /* Garante que o padding não altere a largura/altura */
-    border: 1px solid #ddd; /* Opcional: adiciona uma borda ao redor do produto */
-    border-radius: 5px; /* Opcional: bordas arredondadas */
+    flex-direction: column;
+    /* Organiza o conteúdo de cima para baixo */
+    align-items: center;
+    /* Alinha o conteúdo ao centro */
+    justify-content: space-between;
+    /* Espaço uniforme entre o conteúdo */
+    width: 225px;
+    /* Define a largura fixa dos produtos */
+    height: 300px;
+    /* Ajusta a altura para ficar mais compacta */
+    text-align: center;
+    /* Centraliza o conteúdo */
+    padding: 10px;
+    /* Adiciona padding para o conteúdo */
+    box-sizing: border-box;
+    /* Garante que o padding não altere a largura/altura */
+    border: 1px solid #ddd;
+    /* Opcional: adiciona uma borda ao redor do produto */
+    border-radius: 5px;
+    /* Opcional: bordas arredondadas */
 }
 
 /* Botões "Ver Mais" */
 .ver-mais {
-    
-    color: white; /* Cor do texto */
-    border: none; /* Remove bordas */
-    padding: 8px 16px; /* Diminui o tamanho do padding do botão */
-    font-size: 14px; /* Ajusta o tamanho da fonte */
-    cursor: pointer; /* Cursor de clique */
-    margin-top: 10px; /* Ajusta a distância do texto até o botão */
-    width: 100%; /* Faz o botão ter a largura total do produto */
-    box-sizing: border-box; /* Garante que o padding não altere a largura total */
+    color: white;
+    /* Cor do texto */
+    border: none;
+    /* Remove bordas */
+    padding: 8px 16px;
+    /* Diminui o tamanho do padding do botão */
+    font-size: 14px;
+    /* Ajusta o tamanho da fonte */
+    cursor: pointer;
+    /* Cursor de clique */
+    margin-top: 10px;
+    /* Ajusta a distância do texto até o botão */
+    width: 100%;
+    /* Faz o botão ter a largura total do produto */
+    box-sizing: border-box;
+    /* Garante que o padding não altere a largura total */
 }
 
 
 /* Efeito visual ao passar o mouse */
 .ver-mais:hover {
-    background-color: #005f73; /* Cor de fundo quando passa o mouse */
+    background-color: #007a00;
+    /* Cor de fundo quando passa o mouse */
 }
 
 
-   /* Estilos para a seção 'Quem Somos' */
-   .quem-somos {
+/* Estilos para a seção 'Quem Somos' */
+.quem-somos {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 20px; /* Espaçamento entre a imagem e o texto */
+    gap: 20px;
+    /* Espaçamento entre a imagem e o texto */
     margin: 20px;
 }
 
 .quem-somos img {
-    width: 50vw; /* A imagem vai ocupar 50% da largura da tela */
-    height: auto; /* Mantém a proporção da imagem */
+    width: 50vw;
+    /* A imagem vai ocupar 50% da largura da tela */
+    height: auto;
+    /* Mantém a proporção da imagem */
     object-fit: cover;
-    border-radius: 20px; /* Tornando a imagem quadrada com cantos arredondados */
+    border-radius: 20px;
+    /* Tornando a imagem quadrada com cantos arredondados */
 }
 
 .quem-somos .text {
     max-width: 600px;
-    
+
 }
 
 h2 {
@@ -355,14 +391,14 @@ h2 {
     bottom: 100px;
 }
 
-.text p{
+.text p {
     text-align: justify;
     position: relative;
     bottom: 70px;
     font-size: 22px;
 }
 
-.text #fale{
+.text #fale {
     text-align: justify;
     position: relative;
     top: 85px;
@@ -374,42 +410,91 @@ h2 {
     top: 60px;
     display: none;
     position: absolute;
-    color: #007a00;
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    padding: 40px 62px;
+    padding: 20px;
+    /* Ajuste do padding para incluir a linha */
     z-index: 10;
-    margin-top: 5px; /* Aparece logo abaixo da imagem */
     right: 1%;
+    /* Alinha no lado direito */
+    width: 200px;
+    /* Ajuste da largura para comportar os itens */
 }
 
 .dropdown-menu::after {
     content: "";
     position: absolute;
-    bottom: -10px; /* Distância da borda inferior da caixa */
-    left: 50%;
+    bottom: 168px;
+    /* Distância da borda inferior da caixa */
+    left: 92%;
     transform: translateX(-50%);
     width: 0;
     height: 0;
-    border-left: 10px solid transparent; /* Seta da esquerda */
-    border-right: 10px solid transparent; /* Seta da direita */
-    border-top: 10px solid white; /* Cor da seta */
+    border-left: 10px solid transparent;
+    /* Seta da esquerda */
+    border-right: 10px solid transparent;
+    /* Seta da direita */
+    border-bottom: 10px solid rgb(255, 255, 255);
+    /* Cor da seta */
+    box-shadow: none;
+    /* Removendo o box-shadow que não funciona aqui */
 }
 
-.dropdown-menu img{
+/* Crie uma sombra ao redor da seta usando um pseudo-elemento adicional */
+.dropdown-menu::before {
+    content: "";
+    position: absolute;
+    bottom: 169px;
+    /* Ajuste para alinhar à seta */
+    left: 92%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 11px solid transparent;
+    /* Um pouco maior que a seta */
+    border-right: 11px solid transparent;
+    /* Um pouco maior que a seta */
+    border-bottom: 11px solid rgba(0, 0, 0, 0.07);
+    /* Sombra */
+    z-index: -1;
+    /* Posiciona atrás da seta */
+}
+
+.dropdown-menu img {
+    top: -20px;
     position: relative;
     height: 50px;
-    width: auto;
-    right: 45px;
+    width: 50px;
+    border-radius: 50%;
+    /* Torna a imagem circular */
+    display: block;
 }
 
-.dropdown-menu p{
-    position: absolute;
-    right: 40px;
+.dropdown-menu p {
+    text-align: center;
+    /* Centraliza o texto do nome */
+    position: relative;
+    top: 20px;
+    font-size: 16px;
+    margin: 10px 0;
+    /* Espaçamento acima e abaixo */
 }
 
-.dropdown-menu button{
+.dropdown-menu .linha {
+    position: relative;
+    bottom: 20px;
+    width: 100%;
+    /* Linha ocupa toda a largura do dropdown */
+    height: 1px;
+    /* Linha fina */
+    background-color: #ddd;
+    /* Cinza fraco */
+    margin: 10px 0;
+    /* Espaçamento acima e abaixo */
+}
+
+.dropdown-menu button {
     position: absolute;
     bottom: 20px;
 
@@ -417,46 +502,140 @@ h2 {
 
 /* Botão dentro do menu */
 #logout-button {
+    display: block;
+    /* Garante que ocupe uma linha inteira */
     background-color: transparent;
     border: none;
     color: #333;
     font-size: 14px;
     cursor: pointer;
+    text-align: center;
+    position: relative;
+    bottom: 6px;
+    left: 40%;
 }
 
 #logout-button:hover {
-    color: rgb(10, 151, 29);
+    color: #007a00;
     text-decoration: underline;
 }
 
 /* Create a gray overlay effect */
 .overlay {
     display: none;
-    position: fixed; /* Position it over the entire page */
+    position: fixed;
+    /* Position it over the entire page */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.705); /* Semi-transparent gray */
-    z-index: 999; /* Make sure it's above other content */
-  }
-  
-  /* Style for the modal content */
-  .modal-content {
+    background-color: rgba(0, 0, 0, 0.705);
+    /* Semi-transparent gray */
+    z-index: 999;
+    /* Make sure it's above other content */
+}
+
+/* Style for the modal content */
+.modal-content {
     position: relative;
-    z-index: 1000; /* Ensure modal content is above the overlay */
-    background-color: white; /* Or any other background color */
+    z-index: 1000;
+    /* Ensure modal content is above the overlay */
+    background-color: white;
+    /* Or any other background color */
     padding: 20px;
     border-radius: 8px;
     max-width: 500px;
-    margin: 10% auto; /* Center the modal */
-  }
-  
-  /* Optional: Style the body to prevent scrolling when the modal is open */
-  body.modal-open {
+    margin: 10% auto;
+    /* Center the modal */
+}
+
+/* Optional: Style the body to prevent scrolling when the modal is open */
+body.modal-open {
     overflow: hidden;
-  }
+}
 
 .removeOverlay {
     display: none !important;
+}
+
+/* Editar e Remover */
+
+.updateProductBtn {
+    right: 30px;
+    bottom: 10px;
+    background-color: white;
+    color: #00b300;
+    border: 1px solid #d3d3d3; /* Borda cinza claro */
+    padding: 2px 5px; /* Reduz o padding */
+    border-radius: 3px; /* Reduz o arredondamento */
+    cursor: pointer;
+    font-size: 12px; /* Fonte menor para ocupar menos espaço */
+    transition: background-color 0.3s, color 0.3s;
+    display: inline-block; /* Garante alinhamento lado a lado */
+    vertical-align: middle; /* Alinha ao centro verticalmente */
+    margin-right: 5px; /* Espaço entre os botões */
+    position: relative;
+}
+
+.removeProductBtn {
+    left: 25px;
+    top: 14px;
+    background-color: white;
+    color: #00b300;
+    border: 1px solid #d3d3d3; /* Borda cinza claro */
+    padding: 2px 5px; /* Reduz o padding */
+    border-radius: 3px; /* Reduz o arredondamento */
+    cursor: pointer;
+    font-size: 12px; /* Fonte menor para ocupar menos espaço */
+    transition: background-color 0.3s, color 0.3s;
+    display: inline-block; /* Garante alinhamento lado a lado */
+    vertical-align: middle; /* Alinha ao centro verticalmente */
+    margin-right: 5px; /* Espaço entre os botões */
+    position: relative;
+}
+
+.confirmUpdateProductBtn {
+    bottom: 5.5px;
+    background-color: #00b300;
+    color: white;
+    border: 1px solid #d3d3d3; /* Borda cinza claro */
+    padding: 2px 5px; /* Reduz o padding */
+    border-radius: 3px; /* Reduz o arredondamento */
+    cursor: pointer;
+    font-size: 12px; /* Fonte menor para ocupar menos espaço */
+    transition: background-color 0.3s, color 0.3s;
+    display: inline-block; /* Garante alinhamento lado a lado */
+    vertical-align: middle; /* Alinha ao centro verticalmente */
+    margin-right: 5px; /* Espaço entre os botões */
+    position: relative;
+}
+
+
+.updateProductBtn:hover {
+    color: #007a00;
+    background-color: #f9f9f9; /* Leve alteração no fundo ao passar o mouse */
+}
+
+.removeProductBtn:hover {
+    color: #007a00;
+    background-color: #f9f9f9; /* Leve alteração no fundo ao passar o mouse */
+}
+
+.confirmUpdateProductBtn:hover {
+    color: #f9f9f9;
+    background-color: #007a00; /* Leve alteração no fundo ao passar o mouse */
+}
+/* Nome Produto */
+
+.product h3{
+    width: 100%; /* Largura total do container */
+    max-width: 300px; /* Define a largura máxima */
+    height: 3em; /* Altura para aproximadamente 2 linhas */
+    line-height: 1.5em; /* Espaçamento entre as linhas */
+    overflow-y: auto; /* Adiciona rolagem vertical quando necessário */
+    word-wrap: break-word; /* Quebra palavras longas */
+    border: 1px solid #ffffff; /* Adiciona um quadrado ao redor */
+    padding: 5px;
+    box-sizing: border-box; /* Inclui padding no cálculo da largura */
+    font-size: 14px; /* Tamanho do texto */
 }

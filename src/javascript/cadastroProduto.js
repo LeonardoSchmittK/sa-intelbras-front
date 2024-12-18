@@ -9,13 +9,13 @@ fileInput.addEventListener('change', function () {
 
 
 document.getElementById('productForm').addEventListener('submit', async (event) => {
-    event.preventDefault(); 
+    event.preventDefault();
 
     const name = document.getElementById('productName').value;
     const description = document.getElementById('productDescription').value;
     const category = document.querySelector('input[name="productCategory"]:checked')?.value;
-    const image = document.getElementById('productImage').files[0]; // Get the file from the input
-    console.log(image)
+    const image = document.getElementById('productImage').files[0]; 
+
     if (!category) {
         alert('Por favor, selecione uma categoria.');
         return;
@@ -35,7 +35,7 @@ document.getElementById('productForm').addEventListener('submit', async (event) 
     try {
         const response = await fetch('https://sa-intelbras-api.onrender.com/products', {
             method: 'POST',
-            body: formData, 
+            body: formData,
         });
 
         // Handle the response
@@ -43,9 +43,15 @@ document.getElementById('productForm').addEventListener('submit', async (event) 
 
         if (response.ok) {
             document.querySelector("#productList").style.display = "block";
-            document.querySelector("#productList").innerHTML += `<div style="display:flex;">
-                <i class="uil uil-check-circle"></i>
-                <p>${name} cadastrado com sucesso!</p></div></br>`;
+            document.querySelector("#productList").style.overflow = 'auto';
+            document.querySelector("#productList").innerHTML += `
+                <div style="display:flex; max-width: 300px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                    <i class="uil uil-check-circle"></i>
+                    <p style="max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                        ${name} cadastrado com sucesso!
+                    </p>
+                </div>
+                </br>`;
             document.getElementById('productForm').reset();
         } else {
             alert(result.message || 'Erro ao cadastrar o produto.');

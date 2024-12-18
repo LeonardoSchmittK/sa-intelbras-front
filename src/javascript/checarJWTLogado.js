@@ -16,7 +16,7 @@ if (token) {
     })
     .then(data => {
       document.querySelector(".user").innerHTML = `
-      Olá, ${localStorage.getItem("username")} :) 
+      Olá ${localStorage.getItem("username")}, seja bem-vindo :)
       <img src="../img/usuarioDefault.png" alt="usuário" onclick="toggleMenu()" style="cursor: pointer">
       `;
       document.querySelector(".username").innerHTML = `${localStorage.getItem("username")}`

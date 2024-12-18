@@ -20,8 +20,8 @@ const signUpUser = async (e) => {
       const data = await response.json();
   
       if (response.ok) {
-        console.log('User signed up successfully:', data);
-        alert('User signed up successfully!');
+        console.log('Usuário cadastrado com sucesso:', data);
+        alert('Usuário cadastrado com sucesso!');
         checkbox.checked = false;  
       } else {
         console.error('Sign-up error:', data.error);
