@@ -1,7 +1,7 @@
 const token = localStorage.getItem('token');
 
 if (token) {
-  fetch('https://sa-intelbras-api.onrender.com/users/authenticate', {
+  fetch('https://sa-intelbras-back-3.onrender.com/users/authenticate', {
     method: 'GET',
     headers: {
       'Authorization': `Bearer ${token}`, 

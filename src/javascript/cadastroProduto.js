@@ -34,7 +34,7 @@ document.getElementById('productForm').addEventListener('submit', async (event) 
     formData.append('image', image); // Append the image file
 
     try {
-        const response = await fetch('https://sa-intelbras-api.onrender.com/products', {
+        const response = await fetch('https://sa-intelbras-back-3.onrender.com/products', {
             method: 'POST',
             body: formData,
         });

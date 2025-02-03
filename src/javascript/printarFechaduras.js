@@ -1,6 +1,6 @@
 async function fetchProducts() {
     try {
-        const response = await fetch('https://sa-intelbras-api.onrender.com/products/getByCategory', {
+        const response = await fetch('https://sa-intelbras-back-3.onrender.com/products/getByCategory', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
